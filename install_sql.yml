@@ -1,0 +1,36 @@
+---
+- name: install sql_server
+  hosts: sql_server
+  tasks:
+
+   - name: create directory 'D:\Temp' on target server
+     ansible.windows.win_file:
+       path: C:\Temp
+       state: directory
+
+   - name: copy sql_zip_file from server to node and unzip
+     ansible.windows.win_unzip:
+       src: Z:\SQL2019.zip
+       dest: C:\TEMP
+       recurse: yes
+       delete_archive: no 
+
+   - name: copy ssms from server to win_node
+     ansible.windows.win_copy:
+       src: Z:\ssms.exe
+       dest: C:\Temp
+       remote_src: yes
+   
+   - copy sql_config_file from lnx to win_node
+     ansible.windows.win_copy:
+       src: Z:\hello.txt
+       dest: C:\Temp\
+       remote_src: yes
+
+
+#  - name: install sql server
+#    ansible.windows.win_package:
+#      path: C:\TEMP\SQL2019\setup.exe
+#      arguments: ' /ConfigurationFile=C:\TEMP\cfg.ini /q /IAcceptSQLServerLicenseTerms'
+#      state: present
+
