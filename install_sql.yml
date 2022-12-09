@@ -4,7 +4,7 @@
   tasks:
 
     - name: create directory 'D:\Temp' on target server
-      ansible.windows.win_file:
+      win_file:
         path: C:\Temp
         state: directory
 
@@ -12,17 +12,16 @@
       win_unzip:
         src: Z:\SQL2019.zip
         dest: C:\TEMP\
-#        recurse: yes
         delete_archive: no 
 
     - name: copy ssms from server to win_node
-      ansible.windows.win_copy:
+      win_copy:
         src: Z:\SSMS-Setup.exe
         dest: C:\Temp
         remote_src: yes
    
     - name: copy sql_config_file from lnx to win_node
-      ansible.windows.win_copy:
+      win_copy:
         src: Z:\hello.txt
         dest: C:\Temp\
         remote_src: yes
