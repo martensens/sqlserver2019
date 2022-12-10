@@ -11,7 +11,7 @@
     - name: copy file from lnx to win
       win_copy: 
         src: var/lib/awx/projects/_8__sql_install/install_sql.yml 
-        dest: C:\TEMP\
+        dest: C:\TEMP
 
     - name: copy sql_zip_file from server to node and unzip
       win_unzip:
