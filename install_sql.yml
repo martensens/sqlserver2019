@@ -5,7 +5,7 @@
 
     - name: copy file from lnx to win
       win_copy: 
-        src: var/lib/awx/projects/_8__install_sql/install_sql.yml 
+        src: var/lib/awx/projects/_8__sql_install/install_sql.yml 
         dest: C:\TEMP\
     
     - name: create directory 'D:\Temp' on target server
