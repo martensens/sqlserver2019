@@ -12,7 +12,17 @@
       win_copy: 
         src: /var/lib/awx/projects/_8__sql_install/install_sql.yml 
         dest: C:\TEMP\
-
+        
+    - name: copy powershellfiles from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/*.ps1
+        dest: C:\TEMP\
+        
+    - name: copy cfg_ini_file from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/cfg.ini 
+        dest: C:\TEMP\   
+        
     - name: copy sql_zip_file from server to node and unzip
       win_unzip:
         src: Z:\SQL2019.zip
@@ -24,7 +34,13 @@
         src: Z:\SSMS-Setup.exe
         dest: C:\Temp\
         remote_src: yes
-   
+                
+    - name: copy config_csv_file by powershell from server to temp
+      win_shell: C:\Temp\copyConfigcsvFile.ps1 
+                
+    - name: update config_ini_file by powershell 
+      win_shell: C:\Temp\updateSQLServerConfigFile.ps1 
+        
     - name: copy sql_config_file from lnx to win_node
       win_copy:
         src: Z:\hello.txt
