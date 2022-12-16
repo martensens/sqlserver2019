@@ -13,10 +13,15 @@
         src: /var/lib/awx/projects/_8__sql_install/install_sql.yml 
         dest: C:\TEMP\
         
-    - name: copy powershellfiles from lnx to win
+    - name: copy powershellfile copyconfig from lnx to win
       win_copy: 
-        src: /var/lib/awx/projects/_8__sql_install/*.ps1
+        src: /var/lib/awx/projects/_8__sql_install/copyConfigcsvFile.ps1.ps1
         dest: C:\TEMP\
+        
+    - name: copy powershellfile updatesqlini from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/updateSQLServerConfigFile.ps1
+        dest: C:\TEMP\        
         
     - name: copy cfg_ini_file from lnx to win
       win_copy: 
