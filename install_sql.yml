@@ -15,7 +15,7 @@
         
     - name: copy powershellfile copyconfig from lnx to win
       win_copy: 
-        src: /var/lib/awx/projects/_8__sql_install/copyConfigcsvFile.ps1.ps1
+        src: /var/lib/awx/projects/_8__sql_install/copyConfigcsvFile.ps1
         dest: C:\TEMP\
         
     - name: copy powershellfile updatesqlini from lnx to win
