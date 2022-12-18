@@ -6,5 +6,5 @@
   - name: install sql server
     win_package:
       path: C:\TEMP\SQL2019\setup.exe
-      arguments: ' /ConfigurationFile=C:\TEMP\cfg.ini /q /IAcceptSQLServerLicenseTerms'
+      arguments: ' ACTION=INSTALL /ConfigurationFile=C:\TEMP\cfg.ini /q /IAcceptSQLServerLicenseTerms'
       state: present
