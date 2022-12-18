@@ -1,5 +1,5 @@
 ---
-- name: install sql_server
+- name: create_db
   hosts: db_server
   tasks:
    
