@@ -19,10 +19,4 @@
       win_shell: C:\Temp\copyConfigcsvFile.ps1 
                 
     - name: update config_ini_file by powershell 
-      win_shell: C:\Temp\updateSQLServerConfigFile.ps1 
-        
-    - name: copy sql_config_file from lnx to win_node
-      win_copy:
-        src: Z:\hello.txt
-        dest: C:\Temp\
-        remote_src: yes
+      win_shell: C:\Temp\updateSQLServerConfigFile.ps1
