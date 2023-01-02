@@ -3,8 +3,8 @@
   hosts: db_server
   tasks:
   
-     - name: copy sql_zip_file from server to node and unzip
-       win_unzip:
+    - name: copy sql_zip_file from server to node and unzip
+      win_unzip:
         src: Z:\SQL2019.zip
         dest: C:\TEMP\
         delete_archive: no
