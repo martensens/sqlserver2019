@@ -1,5 +1,5 @@
 ---
-- name: copy_and_move_files
+- name: copy_from_lnx_and_move_files
   hosts: db_server
   tasks:
 
