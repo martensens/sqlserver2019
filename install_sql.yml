@@ -27,11 +27,3 @@
       win_copy: 
         src: /var/lib/awx/projects/_8__sql_install/cfg.ini 
         dest: C:\TEMP\   
-        
-   
-#  - name: install sql server
-#    ansible.windows.win_package:
-#      path: C:\TEMP\SQL2019\setup.exe
-#      ameirguments: ' /ConfigurationFile=C:\TEMP\cfg.ini /q /IAcceptSQLServerLicenseTerms'
-#      state: present
-
