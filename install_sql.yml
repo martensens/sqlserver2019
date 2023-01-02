@@ -1,5 +1,5 @@
 ---
-- name: install sql_server
+- name: copy_and_move_files
   hosts: db_server
   tasks:
 
