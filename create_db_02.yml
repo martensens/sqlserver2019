@@ -1,0 +1,7 @@
+---
+- name: create sql server 2019
+  hosts: db_server
+  tasks:
+                 
+    - name: install sql server 2019 by ps script
+      win_shell: C:\Temp\create_db.ps1
