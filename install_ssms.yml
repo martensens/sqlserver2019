@@ -1,0 +1,7 @@
+---
+- name: install ssms
+  hosts: db_server
+  tasks:
+                 
+    - name: install ssms by ps script
+      win_shell: C:\Temp\install_ssms.ps1
