@@ -1,0 +1,7 @@
+---
+- name: reboot_server
+  hosts: db_server
+  tasks:
+   
+  - name: reboot win server
+    win_reboot:
