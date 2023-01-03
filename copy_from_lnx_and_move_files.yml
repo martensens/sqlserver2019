@@ -27,3 +27,23 @@
       win_copy: 
         src: /var/lib/awx/projects/_8__sql_install/cfg.ini 
         dest: C:\TEMP\   
+
+    - name: copy ssms_install_ps1 from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/install_ssms.ps1 
+        dest: C:\TEMP\   
+
+    - name: copy ssms_install_yml from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/install_ssms.yml 
+        dest: C:\TEMP\   
+
+    - name: copy reboot_server from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/reboot_server.yml 
+        dest: C:\TEMP\   
+
+    - name: copy delte_directory from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/delete_directory.yml 
+        dest: C:\TEMP\   
