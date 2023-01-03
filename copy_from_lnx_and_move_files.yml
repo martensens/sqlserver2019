@@ -43,7 +43,7 @@
         src: /var/lib/awx/projects/_8__sql_install/reboot_server.yml 
         dest: C:\TEMP\   
 
-    - name: copy delte_directory from lnx to win
+    - name: copy delte_temp_directory from lnx to win
       win_copy: 
-        src: /var/lib/awx/projects/_8__sql_install/delete_directory.yml 
+        src: /var/lib/awx/projects/_8__sql_install/delete_temp_directory.yml 
         dest: C:\TEMP\   
