@@ -1,1 +1,1 @@
-C:\Temp\SSMS-Setup-ENU.exe  /Install /Quiet
+C:\Temp\SSMS-Setup.exe  /Install /Quiet
