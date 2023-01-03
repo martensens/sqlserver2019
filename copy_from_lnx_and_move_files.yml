@@ -10,7 +10,7 @@
 
     - name: copy file from lnx to win
       win_copy: 
-        src: /var/lib/awx/projects/_8__sql_install/install_sql.yml 
+        src: /var/lib/awx/projects/_8__sql_install/create_db.yml 
         dest: C:\TEMP\
         
     - name: copy powershellfile copyconfig from lnx to win
