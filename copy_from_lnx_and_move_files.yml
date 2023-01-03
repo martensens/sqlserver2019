@@ -8,7 +8,12 @@
         path: C:\Temp
         state: directory
 
-    - name: copy file from lnx to win
+    - name: copy create_db_ps1_file from lnx to win
+      win_copy: 
+        src: /var/lib/awx/projects/_8__sql_install/create_db.ps1 
+        dest: C:\TEMP\
+
+    - name: copy create_db_yml_file from lnx to win
       win_copy: 
         src: /var/lib/awx/projects/_8__sql_install/create_db.yml 
         dest: C:\TEMP\
