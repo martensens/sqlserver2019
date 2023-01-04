@@ -1,6 +1,6 @@
 ﻿#Anpassen der cfg.ini an die Vorgaben
 $Pfad = "C:\Temp\cfg.ini"
-$data = Import-Csv $Pfad
+$data = Import-Csv "C:\Temp\*config.csv"
 foreach($info in $data){
     $info.Beschreibung | Add-Content -Path $Pfad
     if($info.Individual.ToString() -ne ''){
